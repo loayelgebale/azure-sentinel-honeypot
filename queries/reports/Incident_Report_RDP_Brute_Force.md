@@ -1,6 +1,6 @@
 # Incident Report: RDP Brute-Force Attack on an Internet-Exposed Azure VM
 
-**Analyst:** (your name)  **Environment:** Azure lab (Microsoft Sentinel)  **Severity:** Low (no compromise found)
+**Analyst:** (loay elgebale)  **Environment:** Azure lab (Microsoft Sentinel)  **Severity:** Low (no compromise found)
 
 ## 1. Executive Summary
 Between 6 and 8 October 2026, an internet-exposed Windows VM in Azure was targeted by automated RDP brute-force attacks. Sentinel recorded failed logon attempts (Event ID 4625) from approximately 51 distinct IP addresses. The most active source alone generated 228,779 failed attempts, and activity peaked at approximately 35,000 attempts per hour on 7 October. No successful logon by an attacker was observed. After RDP access was restricted to a single trusted IP address and the old permissive rule was deleted, the attacks stopped.
@@ -9,9 +9,9 @@ Between 6 and 8 October 2026, an internet-exposed Windows VM in Azure was target
 - **6 Oct (evening):** The VM was deployed with all inbound ports open. Failed logons appeared in Sentinel within hours, starting at around 10,000 per hour.
 - **6-7 Oct:** The attack rate rose steadily as more sources found the host.
 - **7 Oct (early morning):** Peak of approximately 35,000 failed attempts per hour.
-- **7 Oct (~04:00-09:00):** [verify] The rate fell sharply after RDP access was first restricted to a single trusted IP.
+- **7 Oct (~04:00-09:00):** The rate fell sharply after RDP access was first restricted to a single trusted IP.
 - **7-8 Oct:** A low level of attempts (hundreds per hour) continued because the default RDP rule (priority 300, source Any) still allowed external traffic.
-- **8 Oct (~06:47):** [verify] Last failed attempt logged, after the permissive rule was deleted.
+- **8 Oct (~06:47):** Last failed attempt logged, after the permissive rule was deleted.
 - **After 8 Oct:** No failed logons recorded for the rest of the monitoring period.
 
 ## 3. Technical Analysis
