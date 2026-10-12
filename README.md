@@ -57,3 +57,10 @@ This was automated RDP brute-forcing from many hosting-provider IPs. After I res
 ## Tools
 
 Microsoft Azure, Microsoft Sentinel, Log Analytics, Azure Monitor Agent, KQL, Windows Security Events, Sentinel Watchlists and Workbooks.
+
+## Skills demonstrated
+
+- SIEM monitoring and KQL querying in Microsoft Sentinel
+- Threat intelligence enrichment (AbuseIPDB, VirusTotal, AlienVault OTX)
+- Incident reporting and malware triage documentation
+- Network hardening with Azure Network Security Groups
